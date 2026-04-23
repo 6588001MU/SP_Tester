@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People Mailbox</title>
+    <link rel="stylesheet" href="GroupMailbox.css">
+</head>
+
+<script src="app.JS"></script>
+<body>
+
+<div class="top-buttons">
+    <button class="tab-btn" onclick="window.location.href='GroupMailbox.html'">
+        GROUP SEND REQUEST
+    </button>
+    <button class="tab-btn active">
+        PEOPLE SEND REQUEST
+    </button>
+</div>
+
+<div class="mailbox-container">
+
+    <!-- Card -->
+    <div class="request-card">
+        <div class="avatar purple"></div>
+
+        <div class="info">
+            <div class="row">
+                <div class="group-name"></div>
+                <span class="highlight">Want You</span> to Join Group !
+            </div>
+
+            <div class="row">
+                See the member of this group HERE !
+                <span class="eye">👁</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="decline">Decline</button>
+            <button class="accept">Accept</button>
+        </div>
+    </div>
+
+    <div class="request-card">
+        <div class="avatar purple"></div>
+
+        <div class="info">
+            <div class="row">
+                <div class="group-name"></div>
+                <span class="highlight">Want You</span> to Join Group !
+            </div>
+
+            <div class="row">
+                See the member of this group HERE !
+                <span class="eye">👁</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="decline">Decline</button>
+            <button class="accept">Accept</button>
+        </div>
+    </div>
+
+    <div class="request-card">
+        <div class="avatar purple"></div>
+
+        <div class="info">
+            <div class="row">
+                <div class="group-name"></div>
+                <span class="highlight">Want You</span> to Join Group !
+            </div>
+
+            <div class="row">
+                See the member of this group HERE !
+                <span class="eye">👁</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="decline">Decline</button>
+            <button class="accept">Accept</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const invites = JSON.parse(localStorage.getItem("peopleInvites")) || [];
+
+  const container = document.querySelector(".mailbox-container");
+  const template = document.querySelector(".request-card");
+
+  if(!template) return;
+
+  container.innerHTML = "";
+
+  invites.forEach((inv, index)=>{
+
+    const newCard = template.cloneNode(true);
+
+    const infoRows = newCard.querySelectorAll(".row");
+
+    if(infoRows.length > 0){
+      infoRows[0].innerHTML = `
+        ${inv.group}
+        <span class="highlight">Want You</span>
+        to Join Group !
+      `;
+    }
+
+    if(infoRows.length > 1){
+      infoRows[1].innerHTML = `
+        From UID : ${inv.from}
+      `;
+    }
+
+    const acceptBtn = newCard.querySelector(".accept");
+    const declineBtn = newCard.querySelector(".decline");
+
+    acceptBtn.onclick = function(){
+      removeInvite(index);
+    };
+
+    declineBtn.onclick = function(){
+      removeInvite(index);
+    };
+
+    container.appendChild(newCard);
+  });
+
+});
+
+function removeInvite(index){
+  let invites = JSON.parse(localStorage.getItem("peopleInvites")) || [];
+  invites.splice(index,1);
+  localStorage.setItem("peopleInvites", JSON.stringify(invites));
+  location.reload();
+}
+</script>
+
+
+
+</body>
+
+</html>

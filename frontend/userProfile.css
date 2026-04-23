@@ -1,0 +1,110 @@
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#e9f6fb;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;   /* 🔥 */
+  padding-top:40px;
+  min-height:100vh;
+}
+
+/* outer container */
+.profile-wrapper{
+  width:100%;
+  max-width:1200px;   /* was 800px */
+  background:#dff3f7;
+  padding:40px;
+  border-radius:30px;
+}
+
+/* top card */
+.profile-card{
+  background:#9ac2c9;
+  border-radius:25px;
+  padding:25px;
+  display:flex;
+  gap:25px;
+}
+
+/* avatar */
+.avatar{
+  width:200px;
+  height:200px;
+  border-radius:15px;
+  overflow:hidden;
+  background:white;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* info area */
+.info{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* label rows */
+.row{
+  display:flex;
+  gap:80px;
+}
+
+.label{
+  font-weight: bold;
+  font-size: 24px;       
+  line-height: 1.4;
+}
+
+/* subject tags */
+.tag-row{
+  display:flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.tag{
+  background: white;
+  padding: 12px 26px;     
+  border-radius: 24px;
+  font-size: 18px;        
+  font-weight: 600;
+}
+
+/* bottom row */
+.bottom-row{
+  margin-top:20px;
+  display:flex;
+  gap:25px;
+}
+
+/* rating */
+.rating-box{
+  background:#6cc5d2;
+  padding:10px 30px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+/* friend button */
+.friend-btn{
+  background:white;
+  padding:10px 40px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.friend-btn:hover{
+  filter:brightness(0.95);
+}

@@ -1,0 +1,148 @@
+*{
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin:0;
+  background:transparent;
+}
+
+/* PAGE */
+.gc-page{
+  padding:15px;
+}
+
+/* TOP TAGS */
+.gc-tags{
+  display:flex;
+  gap:14px;
+  margin-bottom:14px;
+}
+
+.gc-tag{
+  padding:10px 26px;
+  border-radius:22px;
+  font-weight:700;
+}
+
+.gc-tag.blue{
+  background:#bfe8ee;
+}
+
+.gc-tag.red{
+  background:#ff9f8a;
+}
+
+/* GREY CONTAINER */
+.gc-container{
+  background:#dedede;
+  padding:25px;
+  border-radius:30px;
+  height:440px;
+  overflow-y:auto;
+}
+
+/* ROW (LIGHT BLUE CARD) */
+.gc-row{
+  background:#dff3f7;
+  border-radius:30px;
+  padding:22px 26px;
+  margin-bottom:22px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* LEFT */
+.gc-left{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+/* CIRCLE */
+.gc-circle{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  border:3px solid white;
+}
+
+/* SAMPLE COLORS */
+.c1{ background:#ffb09c; }
+.c2{ background:#e9b0ff; }
+.c3{ background:#8ec1c9; }
+
+/* TEXT */
+.gc-title{
+  font-size:16px;
+  font-weight:800;
+}
+
+.gc-member{
+  font-size:14px;
+  margin-top:6px;
+}
+
+/* RIGHT */
+.gc-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+/* PLUS */
+/* PLUS button */
+.gc-plus{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:none;
+  background:#8fbec6;
+  font-size:22px;
+  font-weight:900;
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* CHAT */
+/* CHAT button */
+.gc-chat{
+  height:46px;
+  padding:0 28px;
+  border-radius:26px;
+  border:none;
+  background:#8fbec6;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.gc-plus:hover,
+.gc-chat:hover{
+  filter:brightness(0.95);
+}
+
+/* RATING button */
+.gc-rating{
+  height:46px;                 /* 🔥 same height */
+  padding:0 22px;
+  border-radius:26px;          /* same rounded style */
+  background:#f4a742;
+  font-size:14px;
+  font-weight:800;
+  border:none;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gc-rating:hover{
+  filter:brightness(0.85);
+}

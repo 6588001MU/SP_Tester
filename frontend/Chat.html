@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<link rel="stylesheet" href="Chat.css">
+</head>
+
+<body>
+
+<div class="chat-wrapper">
+
+  <!-- Room Pills -->
+  <div class="room-bar">
+    <button class="pill group" onclick="goGroupChat()">Group</button>
+    <div class="pill section" id="chatTitle">Year1 Sec1</div>
+  </div>
+
+  <!-- Chat Area -->
+  <div class="chat-panel">
+
+    <!-- Messages -->
+    <div id="chatBox" class="chat-box"></div>
+
+    <!-- Input -->
+    <div class="input-bar">
+      <div class="icon-btn" onclick="openFilePicker()">📎</div>
+      <div class="icon-btn" onclick="openImagePicker()">🖼</div>
+
+      <input id="messageInput" placeholder="Type message...">
+
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </div>
+
+</div>
+
+<input type="file" id="fileInput" style="display:none">
+<input type="file" id="imageInput" accept="image/*" style="display:none">
+
+
+<script src="Chat.js"></script>
+<script src="app.JS"></script>
+</body>
+</html>
+
+<!--groupchat load group function-->
+<script>
+function goGroupChat() {
+  window.parent.postMessage(
+    { action: "LOAD_GROUP_CHAT" },
+    "*"
+  );
+}
+</script>

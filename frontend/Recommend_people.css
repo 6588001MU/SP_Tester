@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eceaf4;
+}
+
+.rp-page {
+  padding: 18px;
+}
+
+.rp-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.rp-tag {
+  display: inline-block;
+  background: #b7dfe8;
+  padding: 14px 26px;
+  border-radius: 22px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rp-back {
+  border: none;
+  background: #c7edf3;
+  padding: 12px 26px;
+  border-radius: 18px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rp-container {
+  background: #d8d6d6;
+  border-radius: 28px;
+  padding: 18px;
+  height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.rp-row {
+  background: #d5edf3;
+  border-radius: 28px;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rp-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.rp-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #d7a9ea;
+  border: 4px solid #f3ddff;
+  flex-shrink: 0;
+}
+
+.rp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rp-uid {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rp-name {
+  font-size: 16px;
+}
+
+.rp-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rp-view,
+.rp-invite {
+  border: none;
+  cursor: pointer;
+  background: #8fc1cc;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.rp-view {
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+}
+
+.rp-invite {
+  padding: 14px 28px;
+  font-size: 18px;
+}
+
+.rp-empty {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}

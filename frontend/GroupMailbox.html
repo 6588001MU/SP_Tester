@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Mailbox</title>
+    <link rel="stylesheet" href="GroupMailbox.css">
+</head>
+
+<script src="app.JS"></script>
+<body>
+
+<div class="top-buttons">
+    <button class="tab-btn active">GROUP SEND REQUEST</button>
+    <button class="tab-btn" onclick="window.location.href='PeopleMailbox.html'">
+        PEOPLE SEND REQUEST
+    </button>
+</div>
+
+<div class="mailbox-container">
+
+    <!-- Request Card -->
+    <div class="request-card">
+        <div class="avatar pink"></div>
+
+        <div class="info">
+            <div class="row">
+                <span>UID : 6X88XXX</span>
+                <span class="highlight">Request</span> to Join Group :
+                <div class="group-name"></div>
+            </div>
+
+            <div class="row small">
+                <span>Name :</span>
+                <span>Surname :</span>
+            </div>
+
+            <div class="row small">
+                <span>Nick Name :</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="decline">Decline</button>
+            <button class="accept">Accept</button>
+        </div>
+    </div>
+
+    <div class="request-card">
+        <div class="avatar pink"></div>
+
+        <div class="info">
+            <div class="row">
+                <span>UID : 6X88XXX</span>
+                <span class="highlight">Request</span> to Join Group :
+                <div class="group-name"></div>
+            </div>
+
+            <div class="row small">
+                <span>Name :</span>
+                <span>Surname :</span>
+            </div>
+
+            <div class="row small">
+                <span>Nick Name :</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="decline">Decline</button>
+            <button class="accept">Accept</button>
+        </div>
+    </div>
+
+    <div class="request-card">
+        <div class="avatar pink"></div>
+
+        <div class="info">
+            <div class="row">
+                <span>UID : 6X88XXX</span>
+                <span class="highlight">Request</span> to Join Group :
+                <div class="group-name"></div>
+            </div>
+
+            <div class="row small">
+                <span>Name :</span>
+                <span>Surname :</span>
+            </div>
+
+            <div class="row small">
+                <span>Nick Name :</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="decline">Decline</button>
+            <button class="accept">Accept</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const requests = JSON.parse(localStorage.getItem("groupRequests")) || [];
+
+  const container = document.querySelector(".mailbox-container");
+  const template = document.querySelector(".request-card");
+
+  if(!template) return;
+
+  // ลบ card เดิมทั้งหมดก่อน
+  container.innerHTML = "";
+
+  requests.forEach((req, index)=>{
+
+    const newCard = template.cloneNode(true);
+
+    // ใส่ข้อมูล
+    const infoRow = newCard.querySelector(".row");
+    infoRow.innerHTML = `
+      UID : ${req.uid}
+      <span class="highlight">Request</span>
+      to Join Group : ${req.group}
+    `;
+
+    // ปุ่ม
+    const acceptBtn = newCard.querySelector(".accept");
+    const declineBtn = newCard.querySelector(".decline");
+
+    acceptBtn.onclick = function(){
+      removeRequest(index);
+    };
+
+    declineBtn.onclick = function(){
+      removeRequest(index);
+    };
+
+    container.appendChild(newCard);
+  });
+
+});
+
+// ลบ request
+function removeRequest(index){
+  let requests = JSON.parse(localStorage.getItem("groupRequests")) || [];
+  requests.splice(index,1);
+  localStorage.setItem("groupRequests", JSON.stringify(requests));
+  location.reload();
+}
+</script>
+
+</body>
+
+</html>
+

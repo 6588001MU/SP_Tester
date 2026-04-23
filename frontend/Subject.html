@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Select Subject</title>
+<link rel="stylesheet" href="Subject.css">
+</head>
+
+<body>
+
+<div class="subject-page">
+
+  <!-- Title -->
+  <div class="subject-title">
+    Subject :
+  </div>
+
+  <!-- Main Rounded Container -->
+  <div class="subject-wrapper">
+
+    <!-- Scrollable Box -->
+    <div class="subject-scroll">
+
+      <div class="subject-grid">
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Problem Solving Tech
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Technical English I
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Comparative Culture
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Applied Stat for Computing
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Physical Science & Computation
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Reading Skills
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Wonder Of Life
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Basic Accounting
+        </div>
+
+        <div class="subject-pill" onclick="selectSubject(this)">
+          Man and Society
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Select Button -->
+    <div class="subject-action">
+      <button class="subject-btn" onclick="confirmSubject()">
+        Select
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+let selected = null;
+
+function selectSubject(element){
+  document.querySelectorAll(".subject-pill").forEach(p=>{
+    p.classList.remove("active");
+  });
+
+  element.classList.add("active");
+  selected = element.textContent.trim();
+}
+
+
+function selectSubject(element){
+  document.querySelectorAll(".subject-pill").forEach(p=>{
+    p.classList.remove("active");
+  });
+
+  element.classList.add("active");
+  selected = element.textContent.trim();
+}
+
+function confirmSubject(){
+  if(!selected){
+    alert("Please select a subject.");
+    return;
+  }
+
+  localStorage.setItem("selectedSubject", selected);
+
+  // Tell parent to return dashboard properly
+  window.parent.postMessage({ action: "SUBJECT_SELECTED" }, "*");
+}
+</script>
+
+</body>
+</html>

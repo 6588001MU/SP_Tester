@@ -1,0 +1,126 @@
+/* CARD */
+.invite-card{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  background:#8faeb5;
+  padding:25px 30px;
+  border-radius:30px;
+}
+
+/* AVATAR */
+.avatar{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Colored ring (you can random later) */
+.avatar::before{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:5px solid #ff8c8c; /* change color per card */
+}
+
+/* INFO */
+.invite-info{
+  flex:1;
+}
+
+.uid{
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.name-row{
+  display:flex;
+  gap:40px;
+  margin-bottom:15px;
+}
+
+/* INVITE ROW */
+.invite-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Custom Select */
+.invite-select{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#cfcfcf;
+  border-radius:20px;
+  padding:6px 15px;
+  width:150px;
+  cursor:pointer;
+}
+
+.invite-select .selected{
+  font-size:12px;
+  font-weight:700;
+  color:#666;
+}
+
+.invite-select .arrow{
+  font-size:12px;
+}
+
+/* MAIN CONTAINER */
+.invited-container{
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px 10px;
+}
+
+/* GRID */
+.invited-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 50px;   /* vertical | horizontal spacing */
+  align-items: stretch;
+}
+
+/* CARD */
+.invite-card{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #8faeb5;
+  padding: 30px;
+  border-radius: 35px;
+  min-height: 170px;
+  box-sizing: border-box;
+}
+
+/* RIGHT SIDE ACTION */
+.invite-action{
+  display:flex;
+  align-items:center;
+}
+
+/* INVITE BUTTON */
+.invite-btn{
+  background:#6bd14b;
+  border:none;
+  padding:10px 22px;
+  border-radius:25px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.invite-btn:hover{
+  background:#57b63d;
+  transform:scale(1.05);
+}
+
+.invite-btn:active{
+  transform:scale(0.95);
+}

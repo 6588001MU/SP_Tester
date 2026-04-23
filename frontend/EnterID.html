@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "Login_Page.css">
+</head>
+<body>
+
+    <div class="page">
+        <div class="login-card">
+            <h2 class="login-title">Sign in</h2>
+
+            <div class="input-group">
+                <input type="text" id="username" required />
+                <label for="username">Username</label>
+                <span class="underline"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" required />
+                <label for="password">Password</label>
+                <span class="underline"></span>
+            </div>
+
+            <button class="signin-btn" onclick="signIn()">Sign In</button>
+
+            <p id="error-msg"></p>
+        </div>
+
+        <script src="app.JS"></script>
+
+    </div>
+
+</body>
+</html>

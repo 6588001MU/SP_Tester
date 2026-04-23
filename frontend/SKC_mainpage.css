@@ -1,0 +1,375 @@
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f4f3ff;
+}
+
+/* ================= LAYOUT ================= */
+
+.app{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+  width:260px;
+  background:white;
+  padding:20px;
+
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+  font-size:18px;
+}
+
+.logo img{
+  width:70px;
+  height:70px;
+}
+
+.menu-item{
+  padding:14px 18px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.menu-item.active{
+  background:#cfeff6;
+}
+
+.menu-item:hover{
+  background:#e7f7fb;
+}
+
+.back-btn{
+  margin:0 20px 25px 20px;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:#cfeff6;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+  flex:1;
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-card{
+  background:#74c6d4;
+  border-radius:40px;
+  padding:30px;
+
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+
+.profile-avatar{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  background-image: url("../Images/user-icon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-info{
+  background:#c8eef5;
+  border-radius:30px;
+  padding:30px;
+  flex:1;
+
+  font-size:24px;
+  font-weight:700;
+}
+
+.profile-info .row{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.uid{
+  font-size:28px;
+  font-weight:900;
+}
+
+/* ===== YEAR DROPDOWN ===== */
+
+.sec-list{
+  display:none;
+  padding-left:25px;
+  margin-top:8px;
+}
+
+.sec-list.open{
+  display:block;
+}
+
+.sec-item{
+  padding:10px 12px;
+  margin-bottom:6px;
+  border-radius:10px;
+  background:#e7f7fb;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.sec-item:hover{
+  background:#cfeff6;
+}
+
+
+/* ================= MIDDLE ROW ================= */
+
+.middle-row{
+  display:flex;
+  gap:30px;
+}
+
+/* LEFT SMALL CARD */
+
+.small-card{
+  background:#8fbec6;
+  width:300px;
+  border-radius:30px;
+  padding:25px;
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.rating{
+  background:white;
+  padding:12px 20px;
+  border-radius:30px;
+  font-weight:700;
+  text-align: center;
+}
+
+.pill-btn{
+  background:white;
+  border:none;
+  padding:14px;
+  border-radius:30px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.pill-btn:hover{
+  background:#f1f1f1;
+}
+
+/* ================= MAIL BUTTON ================= */
+
+.mail-wrapper{
+  display:flex;
+  justify-content:flex-start;
+  padding:20px 30px;
+}
+
+.mail-btn{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#d9ccf5;   /* soft purple like ref */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  cursor:pointer;
+  position:relative;
+  transition:0.2s ease;
+}
+
+.mail-btn:hover{
+  background:#c5b6ec;
+}
+
+/*=========Email=========*/
+/* notification badge */
+.mail-badge{
+  position:absolute;
+  top:5px;
+  right:5px;
+  background:#ff4d4d;
+  color:white;
+  font-size:12px;
+  font-weight:bold;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mail-wrapper{
+  margin-top:auto;   /* 🔥 pushes it to bottom */
+  padding:15px 30px 10px 30px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-card{
+  flex:1;
+  background:#8ad8e5;
+  border-radius:30px;
+  padding:25px;
+}
+
+.skills-card h3{
+  margin-top:0;
+  font-size:26px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:18px;
+}
+
+.skill-pill{
+  background:white;
+  padding:14px;
+  border-radius:30px;
+  text-align:center;
+  font-weight:700;
+}
+
+/* top header row inside skills card */
+.skills-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+/* eye button */
+.skill-view{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#d8c7f0; /* keep your color theme */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.skill-view:hover{
+  background:#c5b3ea;
+}
+
+
+.skill-pill.add:hover{
+  background: #f1f1f1;
+}
+
+/* ================= AI ASSIST ================= */
+
+.ai-card{
+  margin-top:5px;
+  background:#7faeb6;
+  border-radius:35px;
+  padding:30px 40px;
+  width:100%;
+}
+
+/* top row */
+
+.ai-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+}
+
+.ai-top h3{
+  margin:0;
+  font-size:28px;
+  font-weight:900;
+}
+
+/* dropdown */
+.subject-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 20px;
+  background: #d0edf2;
+  cursor: pointer;
+
+  position: relative;
+  top: -8px;   /* ขยับขึ้น */
+}
+
+/* buttons row */
+.ai-actions{
+  display:flex;
+  gap:30px;
+}
+
+.ai-btn{
+  flex:1;
+  height:60px;
+  border:none;
+  border-radius:35px;
+  font-size:20px;
+  font-weight:700;
+  cursor:pointer;
+  background:#bde7ef;
+  transition:0.2s ease;
+}
+
+.ai-btn:hover{
+  background:#a7dbe4;
+}
+
+/* ================= content area ================= */
+#content-frame-area{
+  display:none;
+  width:100%;
+  height:520px;
+  margin-top:20px;
+}
+
+#contentFrame{
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:25px;
+  background:#dfeff3;
+}
+
+

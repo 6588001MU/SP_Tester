@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Group Chat</title>
+<link rel="stylesheet" href="GroupChat.css">
+</head>
+
+<body>
+
+<div class="gc-page">
+
+  <!-- TOP TAGS -->
+  <div class="gc-tags">
+    <div class="gc-tag blue">Group</div>
+    <div class="gc-tag red">Year 1 Sec 1</div>
+  </div>
+
+  <!-- GREY CONTAINER -->
+  <div class="gc-container">
+
+    <!-- ROW -->
+    <div class="gc-row">
+
+      <div class="gc-left">
+        <div class="gc-circle c1"></div>
+
+        <div class="gc-info">
+          <div class="gc-title">
+            GROUP PROJECT : COMPARATIVE CULTURE
+          </div>
+          <div class="gc-member">
+            MEMBER : ... PEOPLE
+          </div>
+        </div>
+      </div>
+
+      <div class="gc-right">
+        <button class="gc-plus" onclick="goToPage('InvitedFriend.html')">+</button>
+        <button class="gc-rating" onclick="goToRating()">
+          RATING
+        </button>
+        <button class="gc-chat"
+          onclick="goGroupRoom('Compa-cult chat')">
+          CHAT
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ROW -->
+    <div class="gc-row">
+
+      <div class="gc-left">
+        <div class="gc-circle c2"></div>
+
+        <div class="gc-info">
+          <div class="gc-title">
+            GROUP PROJECT : APPLIED STAT. FOR COMPUTING
+          </div>
+          <div class="gc-member">
+            MEMBER : ... PEOPLE
+          </div>
+        </div>
+      </div>
+
+      <div class="gc-right">
+        <button class="gc-plus" onclick="goToPage('InvitedFriend.html')">+</button>
+        <button class="gc-rating">RATING</button>
+        <button class="gc-chat"
+          onclick="goGroupRoom('AppliedStat chat')">
+          CHAT
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ROW -->
+    <div class="gc-row">
+
+      <div class="gc-left">
+        <div class="gc-circle c3"></div>
+
+        <div class="gc-info">
+          <div class="gc-title">
+            GROUP PROJECT : PHYSICAL SCIENCE & COMPUTATION
+          </div>
+          <div class="gc-member">
+            MEMBER : ... PEOPLE
+          </div>
+        </div>
+      </div>
+
+      <div class="gc-right">
+        <button class="gc-plus" onclick="goToPage('InvitedFriend.html')">+</button>
+        <button class="gc-rating">RATING</button>
+        <button class="gc-chat"
+          onclick="goGroupRoom('PhySci + Compute chat')">
+          CHAT
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
+
+<script>
+function goGroupRoom(roomId) {
+  window.parent.postMessage({
+    action: "OPEN_GROUP_ROOM",
+    room: roomId
+  }, "*");
+}
+</script>
+
+<script>
+function goToRating(){
+  window.parent.postMessage({
+    action: "OPEN_RATING"
+  }, "*");
+}
+</script>
+
+

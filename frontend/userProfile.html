@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Profile</title>
+<link rel="stylesheet" href= "userProfile.css">
+</head>
+
+<body>
+
+<div class="profile-wrapper">
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+
+    <!-- Left : Avatar -->
+    <div class="avatar">
+      <img src="../Images/universityStudent.png">
+    </div>
+
+    <!-- Right : Info -->
+    <div class="info">
+
+      <div class="row">
+  <div class="label">Name : <span id="friendFirstNameText"></span></div>
+  <div class="label">Surname : <span id="friendLastNameText"></span></div>
+</div>
+
+      <div class="tag-row">
+  <div class="tag" id="strong1"></div>
+  <div class="tag" id="strong2"></div>
+</div>
+
+<div class="tag-row">
+  <div class="tag" id="strong3"></div>
+  <div class="tag" id="strong4"></div>
+</div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Buttons -->
+  <div class="bottom-row">
+
+    <div class="rating-box">
+  ⭐ Rating <span id="ratingText"></span>
+</div>
+
+<div class="friend-btn" onclick="openFriendFriendList()">
+    💞 FriendList
+</div>
+
+  </div>
+
+</div>
+
+<script src="app.JS"></script>
+
+</body>
+
+</html>

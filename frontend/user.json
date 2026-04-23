@@ -1,0 +1,57 @@
+[
+  {
+    "student_id": "6888001",
+    "username": "u6888001",
+    "password": "1234",
+    "email": "alex.joh@student.mahidol.edu",
+    "year": 1,
+    "section": 1,
+    "track": "-",
+    "first_name": "Alex",
+    "last_name": "Johnson"
+  },
+  {
+    "student_id": "6888002",
+    "username": "u6888002",
+    "password": "1234",
+    "email": "Brain.mil@student.mahidol.ac.th",
+    "year": 1,
+    "section": 1,
+    "track": "-",
+    "first_name": "Brian",
+    "last_name": "Miller"
+  },
+  {
+    "student_id": "6888003",
+    "username": "u6888003",
+    "password": "1234",
+    "email": "brian.lee@student.mahidol.edu",
+    "year": 2,
+    "section": 2,
+    "track": "-",
+    "first_name": "Brian",
+    "last_name": "Lee"
+  },
+  {
+    "student_id": "6688001",
+    "username": "u6688001",
+    "password": "1234",
+    "email": "sarah.tan@student.mahidol.edu",
+    "year": 3,
+    "section": 1,
+    "track": "AI",
+    "first_name": "Sarah",
+    "last_name": "Tan"
+  },
+  {
+    "student_id": "6588001",
+    "username": "u6588001",
+    "password": "1234",
+    "email": "michael.lim@student.mahidol.edu",
+    "year": 4,
+    "section": 1,
+    "track": "SE",
+    "first_name": "Michael",
+    "last_name": "Lim"
+  }
+]

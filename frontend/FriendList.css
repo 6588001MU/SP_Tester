@@ -1,0 +1,68 @@
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin:0;
+  background:transparent;
+}
+
+/* MAIN PANEL */
+.friendlist-container{
+  background:#c9edf2;
+  border-radius:25px;
+  padding:25px 30px;
+  height:100%;
+  overflow-y:auto;
+}
+
+/* TITLE */
+.title{
+  margin:0 0 20px;
+  font-size:28px;
+  font-weight:900;
+}
+
+/* GRID */
+.friend-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:30px 20px;
+}
+
+/* ITEM */
+.friend-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+/* AVATAR BASE */
+.avatar{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background-image: url("../Images/user-icon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color:white; 
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* NAME BAR */
+.name-bar {
+  text-align: center;
+  margin-top: 8px;
+  background:#b7b7b7;
+  font-weight: 500;
+}
+
+.friend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

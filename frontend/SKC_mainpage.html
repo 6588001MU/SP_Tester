@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SKC Main Page</title>
+<link rel="stylesheet" href="SKC_mainpage.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- ========== LEFT SIDEBAR ========== -->
+<aside class="sidebar">
+
+  <div class="logo">
+    <img src="../Images/graduation-cap-icon.jpg" alt="logo">
+    <span>Smart Skill Connect</span>
+  </div>
+   <div class="menu-item" onclick="goToPage('SKC_mainpage.html')">☰ Lobby</div>
+
+  <div class="menu-item" onclick="toggleYear('y1')">☰ Year 1</div>
+<div class="sec-list" id="y1">
+  <div class="sec-item" onclick="openChat('SEC', 'Year1_Sec1')">SEC 1</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year1_Sec2')">SEC 2</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year1_Sec3')">SEC 3</div>
+</div>
+
+<div class="menu-item" onclick="toggleYear('y2')">☰ Year 2</div>
+<div class="sec-list" id="y2">
+  <div class="sec-item" onclick="openChat('SEC', 'Year2_Sec1')">SEC 1</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year2_Sec2')">SEC 2</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year2_Sec3')">SEC 3</div>
+</div>
+
+<div class="menu-item" onclick="toggleYear('y3')">☰ Year 3</div>
+<div class="sec-list" id="y3">
+  <div class="sec-item" onclick="openChat('SEC', 'Year3_Sec1')">SEC 1</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year3_Sec2')">SEC 2</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year3_Sec3')">SEC 3</div>
+</div>
+
+<div class="menu-item" onclick="toggleYear('y4')">☰ Year 4</div>
+<div class="sec-list" id="y4">
+  <div class="sec-item" onclick="openChat('SEC', 'Year4_Sec1')">SEC 1</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year4_Sec2')">SEC 2</div>
+  <div class="sec-item" onclick="openChat('SEC', 'Year4_Sec3')">SEC 3</div>
+</div>
+
+<div class="mail-wrapper" onclick="loadPage('GroupMailbox.html')">
+  <div class="mail-btn">
+    ✉
+  </div>
+</div>
+
+  <button class="back-btn" onclick="goToPage('SKC_mainpage.html')">⮌ Back</button>
+</aside>
+
+<!-- ========== MAIN AREA ========== -->
+<main class="main">
+
+  <!-- PROFILE CARD -->
+  <section class="profile-card">
+
+    <div class="profile-avatar">
+    </div>
+    
+
+    <div class="profile-info">
+
+  <div class="uid">
+    UID : <span id="studentIdText"></span>
+  </div>
+
+  <div class="row">
+    First Name : <span id="firstNameText"></span>
+  </div>
+
+  <div class="row">
+    Last Name : <span id="lastNameText"></span>
+  </div>
+
+</div>
+
+  </section>
+
+  <!-- MIDDLE ROW -->
+  <section id="dashboardArea">
+
+    <section class="middle-row">
+
+      <!-- LEFT BOX -->
+      <div class="small-card">
+
+        <div class="rating">
+          ⭐ Rating 4.3
+        </div>
+
+        <button class="pill-btn" onclick="openMyFriendList()">👭 FriendList</button>
+        <button class="pill-btn" onclick="loadPage('GroupChat.html')">💬 Group Chat</button>
+
+      </div>
+
+      <!-- SKILLS -->
+      <div class="skills-card">
+        <div class="skills-top">
+          <h3>Skills :</h3>
+
+          <div class="skill-view" onclick="loadPage('skillTag.html')">👁</div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-pill">Fundamentals...</div>
+          <div class="skill-pill">Discrete Structure</div>
+          <div class="skill-pill">Adv. Math. I for co...</div>
+          <div class="skill-pill">Physical Science & ...</div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AI ASSIST -->
+    <section class="ai-card">
+
+      <div class="ai-top">
+        <h3>AI ASSIST</h3>
+
+        <div class="subject-select" onclick="loadPage('Subject.html')">
+          <span id="selectedSubjectText">SELECT SUBJECT</span>
+          <span class="arrow">▼</span>
+        </div>
+
+      </div>
+
+      <div class="ai-actions">
+        <button class="ai-btn" id="findGroupBtn" onclick="findGroup()">Find Group</button>
+
+        <button class="ai-btn" onclick="findPeople()">Find People</button>
+      </div>
+
+           <div id="resultBox"></div>
+
+</section>
+
+
+
+
+  </section>
+  <section id="content-frame-area">
+    <iframe id="contentFrame"></iframe>
+  </section>
+
+</main>
+
+</div>
+
+</body>
+<script src="app.js"></script>
+</html>
+

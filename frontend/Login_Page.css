@@ -1,0 +1,188 @@
+body{
+    background-image: url(../Images/Ict_building_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    color: #000000;
+}
+
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 420px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.logo {
+    width: 360px;         /* adjust size here */
+    height: auto;         /* keep aspect ratio */
+}
+
+.header{
+    text-align: center;
+}
+
+.header p {
+    font-size: 14px;
+    color: #555;
+}
+
+hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.p1{
+    color: #0d6efd;
+}
+
+.primary {
+    background: #0d6efd;
+    color: white;
+}
+
+.secondary {
+    background: #f6c78f;
+    color: #000;
+}
+
+.info {
+    font-size: 13px;
+    color: #333;
+    margin-left: 30px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cookie {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.TitleBox{
+    margin-top: 5px;
+    padding: 10px 5px;
+    background: #dfa2d7;
+    text-align: center;
+}
+
+.login-card {
+  width: 380px;
+  padding: 30px 35px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-title {
+  margin: 0 0 25px 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* group */
+.input-group {
+  position: relative;
+  margin: 25px 0;
+}
+
+/* the input */
+.input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  padding: 10px 0;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+/* label on top */
+.input-group label {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* animated underline */
+.input-group .underline {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 0%;
+  background: #1a73e8; /* blue line like your image */
+  transition: 0.25s;
+}
+
+/* focus underline expand */
+.input-group input:focus ~ .underline {
+  width: 100%;
+}
+
+/* Sign in button */
+.signin-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #1a73e8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signin-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* error */
+#error-msg {
+  margin-top: 12px;
+  color: #d32f2f;
+  font-size: 14px;
+}
