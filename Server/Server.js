@@ -114,8 +114,10 @@ app.post("/find-group", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("HTTP server running at http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+const server = app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
 
 const wss = new WebSocket.Server({ port: 8080 });
