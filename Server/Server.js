@@ -7,11 +7,23 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
+/*const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Sgcom33161!",
   database: "ict_simulation"
+});*/ 
+
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT || 3306
+});
+
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
 });
 
 db.connect((err) => {
@@ -120,7 +132,7 @@ const server = app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
 
-const wss = new WebSocket.Server({ port: 8080 });
+const wss = new WebSocket.Server({ server });
 
 let rooms = {};
 
